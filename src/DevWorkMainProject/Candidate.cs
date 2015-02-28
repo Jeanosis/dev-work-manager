@@ -41,6 +41,8 @@ namespace DevWorkMainProject
         private string siteURL;
         private EnglishLevelType englishLevel;
 
+        //private List<Contact> contacsList;
+        //private List<SocialNetworkProfile> socialNetworksList;
 
         //This template fields and similar properties:
         private DateTime lastContactDate;
@@ -75,5 +77,52 @@ namespace DevWorkMainProject
                 else lastContactComment = value;
             }
         }
+
+        public string FirstName
+        {
+            get
+            {
+                return firstName;
+            }
+
+            set
+            {
+                if (value == null)
+                    firstName = "";
+                else firstName = value;
+            }
+        }
+
+        public string MiddleName
+        {
+            get
+            {
+                return middleName;
+            }
+
+            set
+            {
+                if (value == null)
+                    middleName = "";
+                else middleName = value;
+            }
+        }
+
+        public string LastName
+        {
+            get
+            {
+                return lastName;
+            }
+
+            set
+            {
+                if (value == null)
+                    lastName = "";
+                else lastName = value;
+            }
+        }
+
+        
     }
 }

@@ -123,6 +123,79 @@ namespace DevWorkMainProject
             }
         }
 
-        
+        public Candidate()
+        {
+            FirstName = "";
+            MiddleName = "";
+            LastName = "";
+            birthdayDate = new DateTime();
+            gender = GenderType.Male;
+            country = "";
+            city = "";
+            relocationAgreement = false;
+            //photo
+            
+            email = "";
+            skype = "";
+            siteURL = "";
+            englishLevel = EnglishLevelType.Beginner;
+
+            //private List<Contact> contacsList;
+            //private List<SocialNetworkProfile> socialNetworksList;
+
+            //This template fields and similar properties:
+            lastContactDate = new DateTime();
+            lastContactComment = "";
+        }
+
+        public Candidate(string _firstName, string _middleName, string _lastName)
+        {
+            FirstName = _firstName;
+            MiddleName = _middleName;
+            LastName = _lastName;
+            birthdayDate = new DateTime();
+            gender = GenderType.Male;
+            country = "";
+            city = "";
+            relocationAgreement = false;
+            //photo
+
+            email = "";
+            skype = "";
+            siteURL = "";
+            englishLevel = EnglishLevelType.Beginner;
+
+            //private List<Contact> contacsList;
+            //private List<SocialNetworkProfile> socialNetworksList;
+
+            //This template fields and similar properties:
+            lastContactDate = new DateTime();
+            lastContactComment = "";
+        }
+
+        public Candidate(string _firstName, string _middleName, string _lastName, DateTime _lastContactDate, string _lastContactComment)
+        {
+            FirstName = _firstName;
+            MiddleName = _middleName;
+            LastName = _lastName;
+            birthdayDate = new DateTime();
+            gender = GenderType.Male;
+            country = "";
+            city = "";
+            relocationAgreement = false;
+            //photo
+
+            email = "";
+            skype = "";
+            siteURL = "";
+            englishLevel = EnglishLevelType.Beginner;
+
+            //private List<Contact> contacsList;
+            //private List<SocialNetworkProfile> socialNetworksList;
+
+            //This template fields and similar properties:
+            lastContactDate = _lastContactDate;
+            lastContactComment = _lastContactComment;
+        }
     }
 }

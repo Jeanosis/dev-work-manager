@@ -44,51 +44,6 @@ namespace DevWorkMainProject
         private List<Contact> contacsList;
         private List<SocialNetworkProfile> socialNetworksList;
 
-        public string FirstName
-        {
-            get
-            {
-                return firstName;
-            }
-
-            set
-            {
-                if (value == null)
-                    firstName = "";
-                else firstName = value;
-            }
-        }
-
-        public string MiddleName
-        {
-            get
-            {
-                return middleName;
-            }
-
-            set
-            {
-                if (value == null)
-                    middleName = "";
-                else middleName = value;
-            }
-        }
-
-        public string LastName
-        {
-            get
-            {
-                return lastName;
-            }
-
-            set
-            {
-                if (value == null)
-                    lastName = "";
-                else lastName = value;
-            }
-        }
-
         public Candidate()
         {
             FirstName = "";
@@ -101,7 +56,7 @@ namespace DevWorkMainProject
             RelocationAgreement = false;
             PhonesList = new List<PhoneNumber>();
             //photo
-            
+
             Email = "";
             Skype = "";
             SiteURL = "";
@@ -109,7 +64,7 @@ namespace DevWorkMainProject
 
             ContacsList = new List<Contact>();
             SocialNetworksList = new List<SocialNetworkProfile>();
-            
+
         }
 
         public Candidate(string _firstName, string _middleName, string _lastName, GenderType _gender)
@@ -158,6 +113,75 @@ namespace DevWorkMainProject
             SocialNetworksList = new List<SocialNetworkProfile>();
         }
 
+        public Candidate(string _firstName, string _middleName, string _lastName, GenderType _gender, List<Contact> _contactsList)
+        {
+            FirstName = _firstName;
+            MiddleName = _middleName;
+            LastName = _lastName;
+            BirthdayDate = new DateTime();
+            Gender = _gender;
+            Country = "";
+            City = "";
+            RelocationAgreement = false;
+            PhonesList = new List<PhoneNumber>();
+            //photo
+
+            Email = "";
+            Skype = "";
+            SiteURL = "";
+            EnglishLevel = EnglishLevelType.Beginner;
+
+            ContacsList = _contactsList;
+            ContacsList.Sort((x, y) => y.Date.CompareTo(x.Date));
+            SocialNetworksList = new List<SocialNetworkProfile>();
+        }
+
+        public string FirstName
+        {
+            get
+            {
+                return firstName;
+            }
+
+            set
+            {
+                if (value == null)
+                    firstName = "";
+                else firstName = value;
+            }
+        }
+
+        public string MiddleName
+        {
+            get
+            {
+                return middleName;
+            }
+
+            set
+            {
+                if (value == null)
+                    middleName = "";
+                else middleName = value;
+            }
+        }
+
+        public string LastName
+        {
+            get
+            {
+                return lastName;
+            }
+
+            set
+            {
+                if (value == null)
+                    lastName = "";
+                else lastName = value;
+            }
+        }
+
+        
         public DateTime BirthdayDate
         {
             get
@@ -208,7 +232,7 @@ namespace DevWorkMainProject
                 else city = value;
             }
         }
-        public bool RelocationAgreement { get; set; }
+        public bool RelocationAgreement { get { return relocationAgreement; } set { relocationAgreement = value; } }
         public Image Photo { get; set; } //???
         public List<PhoneNumber> PhonesList
         {
@@ -289,6 +313,12 @@ namespace DevWorkMainProject
                     socialNetworksList = new List<SocialNetworkProfile>();
                 else socialNetworksList = value;
             }
+        }
+
+        //List has to be sorted by dates
+        public Contact getLastContact()
+        {
+            return ContacsList[ContacsList.Count-1];
         }
         
     }

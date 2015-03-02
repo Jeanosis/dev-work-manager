@@ -12,15 +12,18 @@ namespace Domain
         private SocialNetworkType type;
         private string link;
         public virtual int Id { get; private set; }
-        public SocialNetworkType Type
+        public virtual SocialNetworkType Type
         {
             get { return type; }
             set { type = value; }
         }
-        public string Link
+        public virtual string Link
         {
             get { return link; }
             set { link = value; }
         }
+
+        public SocialNetworkProfile() { }
+        
     }
 }

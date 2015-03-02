@@ -28,5 +28,9 @@ namespace Domain
             get { return comment; }
             set { comment = value; }
         }
+        public Contact()
+        {
+            Date = new DateTime();
+        }
     }
 }

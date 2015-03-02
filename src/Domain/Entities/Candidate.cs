@@ -12,7 +12,7 @@ namespace Domain
         private string firstName;
         private string middleName;
         private string lastName;
-        private DateTime birthdayDate;
+        private DateTime dob;
         private GenderType gender;
         private string country;
         private string city;
@@ -76,17 +76,17 @@ namespace Domain
         }
 
 
-        public virtual DateTime BirthdayDate
+        public virtual DateTime DOB
         {
             get
             {
-                return birthdayDate;
+                return dob;
             }
             set
             {
                 if (value == null)
-                    birthdayDate = new DateTime();
-                else birthdayDate = value;
+                    dob = new DateTime();
+                else dob = value;
             }
         }
         public virtual GenderType Gender

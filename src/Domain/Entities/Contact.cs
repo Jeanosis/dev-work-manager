@@ -28,6 +28,9 @@ namespace Domain
             get { return comment; }
             set { comment = value; }
         }
+
+        public virtual Candidate Candidate { get; set; } 
+
         public Contact()
         {
             Date = new DateTime();

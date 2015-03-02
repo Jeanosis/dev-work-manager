@@ -23,6 +23,8 @@ namespace Domain
             set { link = value; }
         }
 
+
+        public virtual Candidate Candidate { get; set; } 
         public SocialNetworkProfile() { }
         
     }

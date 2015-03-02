@@ -28,9 +28,9 @@ namespace Domain
 
         public Candidate()
         {
-            BirthdayDate = new DateTime();
+            DOB = new DateTime();
             PhonesList = new List<PhoneNumber>();
-            ContacsList = new List<Contact>();
+            ContactsList = new List<Contact>();
             SocialNetworksList = new List<SocialNetworkProfile>();
         }
 
@@ -172,7 +172,7 @@ namespace Domain
         }
         public virtual EnglishLevelType EnglishLevel { get; set; }
 
-        public virtual List<Contact> ContacsList
+        public virtual List<Contact> ContactsList
         {
             get
             {
@@ -205,7 +205,7 @@ namespace Domain
 
         public virtual void AddContact(Contact contact)
         {
-            ContacsList.Add(contact);
+            ContactsList.Add(contact);
         }
 
         public virtual void AddSocialNetwork(SocialNetworkProfile socialNetwork)
@@ -216,7 +216,7 @@ namespace Domain
         //List has to be sorted by dates
         public virtual Contact getLastContact()
         {
-            return ContacsList[ContacsList.Count - 1];
+            return ContactsList[ContactsList.Count - 1];
         }
     }
 }

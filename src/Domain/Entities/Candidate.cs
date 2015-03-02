@@ -30,95 +30,13 @@ namespace Domain
 
         public Candidate()
         {
-            FirstName = "";
-            MiddleName = "";
-            LastName = "";
             BirthdayDate = new DateTime();
-            Gender = GenderType.Male;
-            Country = "";
-            City = "";
-            RelocationAgreement = false;
             PhonesList = new List<PhoneNumber>();
-            //photo
-
-            Email = "";
-            Skype = "";
-            SiteURL = "";
-            EnglishLevel = EnglishLevelType.Beginner;
-
             ContacsList = new List<Contact>();
             SocialNetworksList = new List<SocialNetworkProfile>();
-
         }
 
-        public Candidate(string _firstName, string _middleName, string _lastName, GenderType _gender)
-        {
-            FirstName = _firstName;
-            MiddleName = _middleName;
-            LastName = _lastName;
-            BirthdayDate = new DateTime();
-            Gender = _gender;
-            Country = "";
-            City = "";
-            RelocationAgreement = false;
-            PhonesList = new List<PhoneNumber>();
-            //photo
-
-            Email = "";
-            Skype = "";
-            SiteURL = "";
-            EnglishLevel = EnglishLevelType.Beginner;
-
-            ContacsList = new List<Contact>();
-            SocialNetworksList = new List<SocialNetworkProfile>();
-
-        }
-
-        public Candidate(string _firstName, string _middleName, string _lastName, GenderType _gender, Contact _contact)
-        {
-            FirstName = _firstName;
-            MiddleName = _middleName;
-            LastName = _lastName;
-            BirthdayDate = new DateTime();
-            Gender = _gender;
-            Country = "";
-            City = "";
-            RelocationAgreement = false;
-            PhonesList = new List<PhoneNumber>();
-            //photo
-
-            Email = "";
-            Skype = "";
-            SiteURL = "";
-            EnglishLevel = EnglishLevelType.Beginner;
-
-            ContacsList = new List<Contact>();
-            ContacsList.Add(_contact);
-            SocialNetworksList = new List<SocialNetworkProfile>();
-        }
-
-        public Candidate(string _firstName, string _middleName, string _lastName, GenderType _gender, List<Contact> _contactsList)
-        {
-            FirstName = _firstName;
-            MiddleName = _middleName;
-            LastName = _lastName;
-            BirthdayDate = new DateTime();
-            Gender = _gender;
-            Country = "";
-            City = "";
-            RelocationAgreement = false;
-            PhonesList = new List<PhoneNumber>();
-            //photo
-
-            Email = "";
-            Skype = "";
-            SiteURL = "";
-            EnglishLevel = EnglishLevelType.Beginner;
-
-            ContacsList = _contactsList;
-            ContacsList.Sort((x, y) => y.Date.CompareTo(x.Date));
-            SocialNetworksList = new List<SocialNetworkProfile>();
-        }
+        
 
         public string FirstName
         {

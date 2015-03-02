@@ -318,9 +318,8 @@ namespace DevWorkMainProject
         //List has to be sorted by dates
         public Contact getLastContact()
         {
-            if (ContacsList.Count > 0)
-                return ContacsList[ContacsList.Count - 1];
-            else return new Contact();
+            return ContacsList[ContacsList.Count-1];
         }
+        
     }
 }

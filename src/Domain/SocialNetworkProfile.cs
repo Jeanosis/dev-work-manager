@@ -4,15 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DevWorkMainProject
+namespace Domain
 {
-    enum SocialNetworkType
-    {
-        LinkedIn,
-        Facebook,
-        VKontakte,
-        GooglePlus
-    }
+  
     class SocialNetworkProfile
     {
         private SocialNetworkType type;

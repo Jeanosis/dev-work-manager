@@ -214,9 +214,12 @@ namespace Domain
         }
 
         //List has to be sorted by dates
-        public virtual Contact getLastContact()
+        public virtual Contact LastContact
         {
-            return ContactsList[ContactsList.Count - 1];
+            get
+            {
+                return ContactsList[ContactsList.Count - 1];
+            }
         }
     }
 }

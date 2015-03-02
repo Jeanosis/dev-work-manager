@@ -12,6 +12,7 @@ namespace Domain
         private ContactType type;
         private DateTime date;
         private string comment;
+        public virtual int Id { get; private set; }
         public ContactType Type
         {
             get { return type; }

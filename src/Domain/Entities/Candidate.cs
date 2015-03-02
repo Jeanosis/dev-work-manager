@@ -34,6 +34,8 @@ namespace Domain
             SocialNetworksList = new List<SocialNetworkProfile>();
         }
 
+
+        public virtual int Id { get; private set; }
         public virtual string FirstName
         {
             get
@@ -196,6 +198,20 @@ namespace Domain
                 else socialNetworksList = value;
             }
         }
+        public virtual void AddPhoneNumber(PhoneNumber phone)
+        {
+            PhonesList.Add(phone);
+        }
+
+        public virtual void AddContact(Contact contact)
+        {
+            ContacsList.Add(contact);
+        }
+
+        public virtual void AddSocialNetwork(SocialNetworkProfile socialNetwork)
+        {
+            SocialNetworksList.Add(socialNetwork);
+        }
 
         //List has to be sorted by dates
         public virtual Contact getLastContact()
@@ -203,4 +219,4 @@ namespace Domain
             return ContacsList[ContacsList.Count - 1];
         }
     }
-    }
+}

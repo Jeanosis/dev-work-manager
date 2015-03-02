@@ -11,6 +11,7 @@ namespace Domain
     {
         private SocialNetworkType type;
         private string link;
+        public virtual int Id { get; private set; }
         public SocialNetworkType Type
         {
             get { return type; }

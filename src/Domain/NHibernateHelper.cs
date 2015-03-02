@@ -12,14 +12,6 @@ using NHibernate.Driver;
 
 namespace Domain.Entities
 {
-    class FluentDBConfig
-    {
-        FluentDBConfig()
-        {
-
-        }
-    }
-
     public class NHibernateHelper
     {
         private static ISessionFactory _sessionFactory;
@@ -39,9 +31,9 @@ namespace Domain.Entities
         {
             _sessionFactory = Fluently.Configure()
                 .Database(MsSqlConfiguration.MsSql2008
-                  .ConnectionString(
-                  @"Server=(local);initial catalog=xxxxx;
-		user=xxxxx;password=xxxxx;") // Modify your ConnectionString
+                  .ConnectionString(c => c
+                  .Server("gorba-pc")
+                  .Database("Sql\\Database")) // Modify your ConnectionString
                               .ShowSql()
                 )
                 .Mappings(m =>

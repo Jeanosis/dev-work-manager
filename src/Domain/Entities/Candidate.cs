@@ -7,7 +7,7 @@ using System.Drawing;
 
 namespace Domain
 {
-    class Candidate
+    public class Candidate
     {
         private string firstName;
         private string middleName;

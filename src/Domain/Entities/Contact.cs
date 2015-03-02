@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Domain
 {
-   
-    class Contact
+
+    public class Contact
     {
         private ContactType type;
         private DateTime date;

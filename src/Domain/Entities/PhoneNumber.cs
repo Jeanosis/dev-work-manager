@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Domain
 {
-   
-    class PhoneNumber
+
+    public class PhoneNumber
     {
         private string phone;
         private PhoneType type;

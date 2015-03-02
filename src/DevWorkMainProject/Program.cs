@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using FluentNHibernate.Mapping;
 
 namespace DevWorkMainProject
 {
@@ -14,6 +15,11 @@ namespace DevWorkMainProject
         [STAThread]
         static void Main()
         {
+            Fluently.Configure()
+                      .Database(/* examples here */)
+                      .Mappings(...)
+                      .BuildSessionFactory();
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Forms.MainForm());

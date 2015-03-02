@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Domain
 {
-    enum ContactType
+    public enum ContactType
     {
         Meet,
         Call

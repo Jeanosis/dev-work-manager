@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Domain
 {
-    enum PhoneType
+    public enum PhoneType
     {
         Home,
         Mobile

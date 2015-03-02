@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Domain
 {
-  
-    class SocialNetworkProfile
+
+    public class SocialNetworkProfile
     {
         private SocialNetworkType type;
         private string link;

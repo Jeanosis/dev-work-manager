@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Domain
 {
-    enum EnglishLevelType
+    public enum EnglishLevelType
     {
         Beginner,
         Elementary,

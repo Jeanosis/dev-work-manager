@@ -23,104 +23,18 @@ namespace Domain
         private string skype;
         private string siteURL;
         private EnglishLevelType englishLevel;
-
-
         private List<Contact> contacsList;
         private List<SocialNetworkProfile> socialNetworksList;
 
         public Candidate()
         {
-            FirstName = "";
-            MiddleName = "";
-            LastName = "";
             BirthdayDate = new DateTime();
-            Gender = GenderType.Male;
-            Country = "";
-            City = "";
-            RelocationAgreement = false;
             PhonesList = new List<PhoneNumber>();
-            //photo
-
-            Email = "";
-            Skype = "";
-            SiteURL = "";
-            EnglishLevel = EnglishLevelType.Beginner;
-
             ContacsList = new List<Contact>();
             SocialNetworksList = new List<SocialNetworkProfile>();
-
         }
 
-        public Candidate(string _firstName, string _middleName, string _lastName, GenderType _gender)
-        {
-            FirstName = _firstName;
-            MiddleName = _middleName;
-            LastName = _lastName;
-            BirthdayDate = new DateTime();
-            Gender = _gender;
-            Country = "";
-            City = "";
-            RelocationAgreement = false;
-            PhonesList = new List<PhoneNumber>();
-            //photo
-
-            Email = "";
-            Skype = "";
-            SiteURL = "";
-            EnglishLevel = EnglishLevelType.Beginner;
-
-            ContacsList = new List<Contact>();
-            SocialNetworksList = new List<SocialNetworkProfile>();
-
-        }
-
-        public Candidate(string _firstName, string _middleName, string _lastName, GenderType _gender, Contact _contact)
-        {
-            FirstName = _firstName;
-            MiddleName = _middleName;
-            LastName = _lastName;
-            BirthdayDate = new DateTime();
-            Gender = _gender;
-            Country = "";
-            City = "";
-            RelocationAgreement = false;
-            PhonesList = new List<PhoneNumber>();
-            //photo
-
-            Email = "";
-            Skype = "";
-            SiteURL = "";
-            EnglishLevel = EnglishLevelType.Beginner;
-
-            ContacsList = new List<Contact>();
-            ContacsList.Add(_contact);
-            SocialNetworksList = new List<SocialNetworkProfile>();
-        }
-
-        public Candidate(string _firstName, string _middleName, string _lastName, GenderType _gender, List<Contact> _contactsList)
-        {
-            FirstName = _firstName;
-            MiddleName = _middleName;
-            LastName = _lastName;
-            BirthdayDate = new DateTime();
-            Gender = _gender;
-            Country = "";
-            City = "";
-            RelocationAgreement = false;
-            PhonesList = new List<PhoneNumber>();
-            //photo
-
-            Email = "";
-            Skype = "";
-            SiteURL = "";
-            EnglishLevel = EnglishLevelType.Beginner;
-
-            ContacsList = _contactsList;
-            ContacsList.Sort((x, y) => y.Date.CompareTo(x.Date));
-            SocialNetworksList = new List<SocialNetworkProfile>();
-        }
-
-        public string FirstName
+        public virtual string FirstName
         {
             get
             {
@@ -129,13 +43,11 @@ namespace Domain
 
             set
             {
-                if (value == null)
-                    firstName = "";
-                else firstName = value;
+                firstName = value;
             }
         }
 
-        public string MiddleName
+        public virtual string MiddleName
         {
             get
             {
@@ -144,13 +56,11 @@ namespace Domain
 
             set
             {
-                if (value == null)
-                    middleName = "";
-                else middleName = value;
+                middleName = value;
             }
         }
 
-        public string LastName
+        public virtual string LastName
         {
             get
             {
@@ -159,14 +69,12 @@ namespace Domain
 
             set
             {
-                if (value == null)
-                    lastName = "";
-                else lastName = value;
+                lastName = value;
             }
         }
 
 
-        public DateTime BirthdayDate
+        public virtual DateTime BirthdayDate
         {
             get
             {
@@ -179,7 +87,7 @@ namespace Domain
                 else birthdayDate = value;
             }
         }
-        public GenderType Gender
+        public virtual GenderType Gender
         {
             get
             {
@@ -190,7 +98,7 @@ namespace Domain
                 gender = value;
             }
         }
-        public string Country
+        public virtual string Country
         {
             get
             {
@@ -198,12 +106,10 @@ namespace Domain
             }
             set
             {
-                if (value == null)
-                    country = "";
-                else country = value;
+                country = value;
             }
         }
-        public string City
+        public virtual string City
         {
             get
             {
@@ -211,14 +117,12 @@ namespace Domain
             }
             set
             {
-                if (value == null)
-                    city = "";
-                else city = value;
+                city = value;
             }
         }
-        public bool RelocationAgreement { get { return relocationAgreement; } set { relocationAgreement = value; } }
-        public Image Photo { get; set; } //???
-        public List<PhoneNumber> PhonesList
+        public virtual bool RelocationAgreement { get { return relocationAgreement; } set { relocationAgreement = value; } }
+        public virtual Image Photo { get; set; } //???
+        public virtual List<PhoneNumber> PhonesList
         {
             get
             {
@@ -231,7 +135,7 @@ namespace Domain
                 else phonesList = value;
             }
         }
-        public string Email
+        public virtual string Email
         {
             get
             {
@@ -239,12 +143,10 @@ namespace Domain
             }
             set
             {
-                if (value == null)
-                    email = "";
-                else email = value;
+                email = value;
             }
         }
-        public string Skype
+        public virtual string Skype
         {
             get
             {
@@ -252,12 +154,10 @@ namespace Domain
             }
             set
             {
-                if (value == null)
-                    skype = "";
-                else skype = value;
+                skype = value;
             }
         }
-        public string SiteURL
+        public virtual string SiteURL
         {
             get
             {
@@ -265,14 +165,12 @@ namespace Domain
             }
             set
             {
-                if (value == null)
-                    siteURL = "";
-                else siteURL = value;
+                siteURL = value;
             }
         }
-        public EnglishLevelType EnglishLevel { get; set; }
+        public virtual EnglishLevelType EnglishLevel { get; set; }
 
-        public List<Contact> ContacsList
+        public virtual List<Contact> ContacsList
         {
             get
             {
@@ -285,7 +183,7 @@ namespace Domain
                 else contacsList = value;
             }
         }
-        public List<SocialNetworkProfile> SocialNetworksList
+        public virtual List<SocialNetworkProfile> SocialNetworksList
         {
             get
             {
@@ -300,7 +198,7 @@ namespace Domain
         }
 
         //List has to be sorted by dates
-        public Contact getLastContact()
+        public virtual Contact getLastContact()
         {
             return ContacsList[ContacsList.Count - 1];
         }

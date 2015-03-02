@@ -4,13 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DevWorkMainProject
+namespace Domain
 {
-    enum PhoneType
-    {
-        Home,
-        Mobile
-    }
+   
     class PhoneNumber
     {
         private string phone;

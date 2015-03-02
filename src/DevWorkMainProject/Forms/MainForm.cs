@@ -18,11 +18,6 @@ namespace DevWorkMainProject.Forms
             InitializeComponent();
         }
 
-        private void MainForm_Load(object sender, EventArgs e)
-        {
-            mainGridControl.DataSource = CreateData();
-        }
-
         private List<Candidate> CreateData()
         {
             Contact newContact = null;
@@ -40,6 +35,33 @@ namespace DevWorkMainProject.Forms
             }
 
             return Result;
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            mainGridControl.DataSource = CreateData();
+            mainGridView.OptionsView.ShowIndicator = false;
+            this.AddOwnedForm(new CandidateForm());
+        }
+
+        private void addButton_Click(object sender, EventArgs e)
+        {
+            if (this.OwnedForms.Length > 1)
+                return;
+
+            this.AddOwnedForm(new CandidateForm());
+            OwnedForms[0].Show();
+            //this.Enabled = false;
+        }
+
+        private void editButton_Click(object sender, EventArgs e)
+        {
+            if (this.OwnedForms.Length > 1)
+                return;
+
+            this.AddOwnedForm(new CandidateForm());
+            OwnedForms[0].Show();
+            //this.Enabled = false;
         }
     }
 }

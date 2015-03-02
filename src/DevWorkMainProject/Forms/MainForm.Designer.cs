@@ -33,9 +33,12 @@
             this.mainGridControl = new DevExpress.XtraGrid.GridControl();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.mainGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.coID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colFirstName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMiddleName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colLastName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.coLastContactDate = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.coLastContactComment = new DevExpress.XtraGrid.Columns.GridColumn();
             this.editButton = new DevExpress.XtraEditors.SimpleButton();
             this.addButton = new DevExpress.XtraEditors.SimpleButton();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
@@ -43,9 +46,6 @@
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.buttonsEmptySpaceItem = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.coCounter = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.coLastContactDate = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.coLastContactComment = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mainGridControl)).BeginInit();
@@ -100,7 +100,7 @@
             // mainGridView
             // 
             this.mainGridView.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.coCounter,
+            this.coID,
             this.colFirstName,
             this.colMiddleName,
             this.colLastName,
@@ -108,27 +108,51 @@
             this.coLastContactComment});
             this.mainGridView.GridControl = this.mainGridControl;
             this.mainGridView.Name = "mainGridView";
+            this.mainGridView.OptionsView.ShowGroupPanel = false;
+            // 
+            // coID
+            // 
+            this.coID.Caption = "ID";
+            this.coID.Name = "coID";
+            this.coID.Visible = true;
+            this.coID.VisibleIndex = 0;
             // 
             // colFirstName
             // 
             this.colFirstName.FieldName = "FirstName";
             this.colFirstName.Name = "colFirstName";
             this.colFirstName.Visible = true;
-            this.colFirstName.VisibleIndex = 0;
+            this.colFirstName.VisibleIndex = 1;
             // 
             // colMiddleName
             // 
             this.colMiddleName.FieldName = "MiddleName";
             this.colMiddleName.Name = "colMiddleName";
             this.colMiddleName.Visible = true;
-            this.colMiddleName.VisibleIndex = 1;
+            this.colMiddleName.VisibleIndex = 2;
             // 
             // colLastName
             // 
             this.colLastName.FieldName = "LastName";
             this.colLastName.Name = "colLastName";
             this.colLastName.Visible = true;
-            this.colLastName.VisibleIndex = 2;
+            this.colLastName.VisibleIndex = 3;
+            // 
+            // coLastContactDate
+            // 
+            this.coLastContactDate.Caption = "Last contact date";
+            this.coLastContactDate.FieldName = "LastContact.Date";
+            this.coLastContactDate.Name = "coLastContactDate";
+            this.coLastContactDate.Visible = true;
+            this.coLastContactDate.VisibleIndex = 4;
+            // 
+            // coLastContactComment
+            // 
+            this.coLastContactComment.Caption = "Comment";
+            this.coLastContactComment.FieldName = "LastContact.Comment";
+            this.coLastContactComment.Name = "coLastContactComment";
+            this.coLastContactComment.Visible = true;
+            this.coLastContactComment.VisibleIndex = 5;
             // 
             // editButton
             // 
@@ -138,6 +162,7 @@
             this.editButton.StyleController = this.layoutControl1;
             this.editButton.TabIndex = 5;
             this.editButton.Text = "Edit";
+            this.editButton.Click += new System.EventHandler(this.editButton_Click);
             // 
             // addButton
             // 
@@ -147,6 +172,7 @@
             this.addButton.StyleController = this.layoutControl1;
             this.addButton.TabIndex = 4;
             this.addButton.Text = "Add";
+            this.addButton.Click += new System.EventHandler(this.addButton_Click);
             // 
             // layoutControlGroup1
             // 
@@ -197,27 +223,6 @@
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem3.TextVisible = false;
             // 
-            // coCounter
-            // 
-            this.coCounter.Caption = "gridColumn1";
-            this.coCounter.Name = "coCounter";
-            this.coCounter.Visible = true;
-            this.coCounter.VisibleIndex = 3;
-            // 
-            // coLastContactDate
-            // 
-            this.coLastContactDate.Caption = "gridColumn2";
-            this.coLastContactDate.Name = "coLastContactDate";
-            this.coLastContactDate.Visible = true;
-            this.coLastContactDate.VisibleIndex = 4;
-            // 
-            // coLastContactComment
-            // 
-            this.coLastContactComment.Caption = "gridColumn3";
-            this.coLastContactComment.Name = "coLastContactComment";
-            this.coLastContactComment.Visible = true;
-            this.coLastContactComment.VisibleIndex = 5;
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -258,7 +263,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn colFirstName;
         private DevExpress.XtraGrid.Columns.GridColumn colMiddleName;
         private DevExpress.XtraGrid.Columns.GridColumn colLastName;
-        private DevExpress.XtraGrid.Columns.GridColumn coCounter;
+        private DevExpress.XtraGrid.Columns.GridColumn coID;
         private DevExpress.XtraGrid.Columns.GridColumn coLastContactDate;
         private DevExpress.XtraGrid.Columns.GridColumn coLastContactComment;
     }

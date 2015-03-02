@@ -164,8 +164,21 @@ namespace Domain
                 else lastName = value;
             }
         }
+        //temp---------------------
+        public Contact LastContact
+        {
+            get
+            {
+                Contact Result = new Contact();
 
+                Result.Date = new DateTime(1994, 01, 22);
+                Result.Comment = String.Format("This is comment.");
+                Result.Type = ContactType.Meet;
 
+                return Result;
+            }
+        }
+        //---------------------------
         public DateTime BirthdayDate
         {
             get

@@ -4,14 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DevWorkMainProject
+namespace Domain
 {
-    enum ContactType
-    {
-        Meet,
-        Call
-
-    }
+   
     class Contact
     {
         private ContactType type;

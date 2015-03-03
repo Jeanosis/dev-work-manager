@@ -79,12 +79,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DevWorkMainProject\DevWorkMainProject.csproj">
-      <Project>{a8b749a8-ecb6-4bd0-aa46-2f0dd7aeae82}</Project>
-      <Name>DevWorkMainProject</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>

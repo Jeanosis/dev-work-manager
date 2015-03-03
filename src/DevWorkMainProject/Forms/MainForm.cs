@@ -35,7 +35,7 @@ namespace DevWorkMainProject.Forms
                 newCandidate.FirstName = String.Format("Vasya_{0}", i);
                 newCandidate.MiddleName = String.Format("Vasilievich_{0}", i);
                 newCandidate.LastName = String.Format("Pupkin_{0}", i);
-                newCandidate.ContactsList.Add(newContact);
+                newCandidate.ContactsList.Add(newContact); 
 
                 Result.Add(newCandidate);
             }

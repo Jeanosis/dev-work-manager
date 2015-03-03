@@ -13,7 +13,7 @@ namespace Domain.Entities
         {
             Table("Candidate");
             Id(e => e.Id)
-                   .GeneratedBy.Sequence("Candidate_seq");
+                   .GeneratedBy.Sequence("Candidate_seq");//на бд пернести
             Map(e => e.FirstName);
             Map(e => e.MiddleName);
             Map(e => e.LastName);

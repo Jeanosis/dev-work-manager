@@ -9,31 +9,11 @@ namespace Domain
 
     public class Contact
     {
-        private ContactType type;
-        private DateTime date;
-        private string comment;
         public virtual int Id { get; private set; }
-        public ContactType Type
-        {
-            get { return type; }
-            set { type = value; }
-        }
-        public DateTime Date
-        {
-            get { return date; }
-            set { date = value; }
-        }
-        public string Comment
-        {
-            get { return comment; }
-            set { comment = value; }
-        }
-
+        public ContactType Type{get; set;}
+        public DateTime Date { get; set; }
+        public string Comment { get; set; }
         public virtual Candidate Candidate { get; set; } 
-
-        public Contact()
-        {
-            Date = new DateTime();
-        }
+        public Contact() {}
     }
 }

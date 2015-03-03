@@ -9,17 +9,11 @@ namespace Domain
 
     public class SocialNetworkProfile
     {
-        private SocialNetworkType type;
-        private string link;
-        public SocialNetworkType Type
-        {
-            get { return type; }
-            set { type = value; }
-        }
-        public string Link
-        {
-            get { return link; }
-            set { link = value; }
-        }
+        public virtual int Id { get; private set; }
+        public virtual SocialNetworkType Type { get; set; }
+        public virtual string Link { get; set; }
+        public virtual Candidate Candidate { get; set; } 
+        public SocialNetworkProfile() { }
+        
     }
 }

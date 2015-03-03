@@ -21,6 +21,7 @@ namespace DevWorkMainProject.Forms
         private List<Candidate> CreateData()
         {
             Contact newContact = null;
+            Candidate newCandidate = null;
             List<Candidate> Result = new List<Candidate>();
 
             for (int i = 0; i < 10; i++)
@@ -30,8 +31,13 @@ namespace DevWorkMainProject.Forms
                 newContact.Comment = String.Format("This is comment #{0}", i);
                 newContact.Type = ContactType.Meet;
 
-                Result.Add(new Candidate(String.Format("Vasya_{0}", i), String.Format("Vasilievich_{0}", i),
-                    String.Format("Pupkin_{0}", i), GenderType.Male, newContact));
+                newCandidate = new Candidate();
+                newCandidate.FirstName = String.Format("Vasya_{0}", i);
+                newCandidate.MiddleName = String.Format("Vasilievich_{0}", i);
+                newCandidate.LastName = String.Format("Pupkin_{0}", i);
+                newCandidate.ContactsList.Add(newContact);
+
+                Result.Add(newCandidate);
             }
 
             return Result;
@@ -40,8 +46,10 @@ namespace DevWorkMainProject.Forms
         private void MainForm_Load(object sender, EventArgs e)
         {
             mainGridControl.DataSource = CreateData();
+            
             mainGridView.OptionsView.ShowIndicator = false;
             this.AddOwnedForm(new CandidateForm());
+            
         }
 
         private void addButton_Click(object sender, EventArgs e)

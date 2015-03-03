@@ -9,17 +9,10 @@ namespace Domain
 
     public class PhoneNumber
     {
-        private string phone;
-        private PhoneType type;
-        public string Phone
-        {
-            get { return phone; }
-            set { phone = value; }
-        }
-        public PhoneType Type
-        {
-            get { return type; }
-            set { type = value; }
-        }
+        public virtual int Id { get; private set; }
+        public virtual string Phone { get; set; }
+        public virtual PhoneType Type { get; set; }
+        public virtual Candidate Candidate { get; set; }
+        public PhoneNumber() { }
     }
 }

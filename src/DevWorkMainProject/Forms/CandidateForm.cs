@@ -19,7 +19,7 @@ namespace DevWorkMainProject.Forms
 
         private void CandidateForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-            this.Parent.Enabled = true;            
+            this.Owner.Enabled = true;
         }
     }
 }

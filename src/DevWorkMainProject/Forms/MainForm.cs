@@ -59,7 +59,7 @@ namespace DevWorkMainProject.Forms
 
             this.AddOwnedForm(new CandidateForm());
             OwnedForms[0].Show();
-            //this.Enabled = false;
+            this.Enabled = false;
         }
 
         private void editButton_Click(object sender, EventArgs e)
@@ -69,7 +69,7 @@ namespace DevWorkMainProject.Forms
 
             this.AddOwnedForm(new CandidateForm());
             OwnedForms[0].Show();
-            //this.Enabled = false;
+            this.Enabled = false;
         }
     }
 }

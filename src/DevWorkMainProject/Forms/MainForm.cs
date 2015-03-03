@@ -40,8 +40,10 @@ namespace DevWorkMainProject.Forms
         private void MainForm_Load(object sender, EventArgs e)
         {
             mainGridControl.DataSource = CreateData();
+            
             mainGridView.OptionsView.ShowIndicator = false;
             this.AddOwnedForm(new CandidateForm());
+            
         }
 
         private void addButton_Click(object sender, EventArgs e)
